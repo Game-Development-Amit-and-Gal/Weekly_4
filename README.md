@@ -63,4 +63,5 @@
 
 ---
 
-### ["Itch.io's Link:"] (https://amit-and-gal.itch.io/spaceship-a4)
+### [Itch.io’s Link](https://amit-and-gal.itch.io/spaceship-a4)
+
