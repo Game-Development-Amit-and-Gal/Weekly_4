@@ -10,9 +10,12 @@ public class FollowPlayer : MonoBehaviour
 
     void LateUpdate()
     {
-        Vector3 desiredPos = playerTransform.position + offset;
-        transform.position = Vector3.Lerp(transform.position, desiredPos, 0.1f);
-        transform.LookAt(playerTransform);
+        if (playerTransform != null)
+        {
+            Vector3 desiredPos = playerTransform.position + offset;
+            transform.position = Vector3.Lerp(transform.position, desiredPos, 0.1f);
+            transform.LookAt(playerTransform);
+        }
     }
 
 }
