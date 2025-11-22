@@ -14,20 +14,20 @@ public class GravityAdjustment : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         landing = GetComponent<OncollideWithObstacle>();
- 
+
     }
 
 
 
     private void FixedUpdate()
     {
-        if(!rb  || !planet || !this) return;
+        if (!rb || !planet || !this) return;
         if (landing != null && landing.IsLanded()) return;
-        
+
 
         Vector3 direction = (planet.position - transform.position).normalized;
         float distance = Vector3.Distance(planet.position, transform.position);
-        float gravity = gravityScale/ distance * distance;
+        float gravity = gravityScale / distance * distance;
 
         rb.AddForce(direction * (gravity + minPull), ForceMode.Acceleration);
     }

@@ -1,7 +1,7 @@
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
 
-[RequireComponent (typeof(Transform))]
+[RequireComponent(typeof(Transform))]
 public class FollowPlayer : MonoBehaviour
 {
     [SerializeField] private Transform playerTransform;
